@@ -1,0 +1,24 @@
+		{% extends "bootstrap/base.html" %}
+		{% block title %}Blogly{% endblock %}
+		{% block head %}
+		{{ super() }}
+		<link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico') }}" type="image/x-icon">
+		<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+		<link rel='stylesheet' type='text/css' media='screen' href="{{url_for('static',filename='new2.css')}}">
+		{% endblock %}
+		
+		
+		
+		{% block content %}
+		<div class="margin">
+			{% for message in get_flashed_messages() %}
+				<div class="alert alert-color">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					{{message}}
+				</div>
+			{% endfor %}
+			{% block page_content %}{% endblock %}
+		</div>
+		{% endblock %}
+		
+		

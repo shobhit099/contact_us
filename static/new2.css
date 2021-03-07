@@ -1,0 +1,12 @@
+.margin{
+    background-color: rgb(161, 162, 218);
+    margin: 7mm;
+    padding: 5mm;
+    border-radius: 5mm;
+}
+
+.alert-color{
+    color: #3a983c;
+    background-color: #e3fcea;
+    border-color: #215822;
+}
